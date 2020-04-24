@@ -4,8 +4,7 @@
 const Sentry = require('@sentry/node');
 const SentryIntegrations = require('@sentry/integrations');
 import cookie from 'cookie';
-
-const SENTRY_DSN = 'https://551ef08079a74253af15c5c547abee02@o292582.ingest.sentry.io/5212048';
+import { SENTRY_DSN } from '../constants';
 
 export default (release = process.env.SENTRY_RELEASE) => {
   let sentryOptions = {
